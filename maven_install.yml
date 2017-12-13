@@ -1,0 +1,37 @@
+
+    - name: yum install wget
+      yum: 
+        name: wget
+        state: latest
+      become: true
+
+    - name: Download source files
+      command: wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+      become: true
+
+    - name: sed ...
+      command: sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+      become: true
+
+    - name: yum install maven
+      yum: 
+        name: apache-maven
+        state: latest
+      become: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

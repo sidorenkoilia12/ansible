@@ -1,0 +1,8 @@
+---
+- hosts: remote_hosts
+  tasks:
+
+  - name: Start apache 
+    command: /usr/local/apache2/bin/apachectl start
+    become: true
+   

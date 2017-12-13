@@ -1,0 +1,7 @@
+
+    - name: installig git
+      yum: 
+        name: git
+        state: present
+      become: true
+

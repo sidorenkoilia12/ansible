@@ -1,0 +1,14 @@
+
+    - name: yum updating
+      yum: 
+        name: '*'
+        update_cache: yes
+        state: latest
+      become: true
+
+    - name: installig java-1.8.0-openjdk*
+      yum: 
+        name: java-1.8.0-openjdk*
+        state: present
+      become: true
+
