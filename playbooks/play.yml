@@ -1,0 +1,11 @@
+---
+- hosts: local
+  remote_user: root
+  vars:
+    myname: Ilya Sidorenko
+    tasks:
+#    - service:
+#      debug: by {{ myname }}
+#      name: httpd
+#      state: started
+#      become: root
