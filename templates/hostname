@@ -1,0 +1,1 @@
+This is test file on {{ ansible_hostname }}, {{ ansible_env.USER }}, {{ ansible_date_time.year }}, {{ ansible_distribution }}
