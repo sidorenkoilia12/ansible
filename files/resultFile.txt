@@ -1,0 +1,1 @@
+This is test file on MiWiFi-R1CM-srv, ilya, 2018, CentOS

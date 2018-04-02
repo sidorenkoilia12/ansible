@@ -1,7 +1,19 @@
 ---
   - hosts: local
+    vars_files:
+      - /home/ilya/IdeaProjects/ansible/vars/main.yml
     tasks:
 
-    - name: restart httpd
-      service: name=httpd state=restarted
-      sudo: yes
+#    - name: restart httpd
+#      service: name=httpd state=restarted
+
+    - name: OS
+      debug: msg={{ ansible_distribution }}
+    - name: User
+      debug: msg={{ ansible_env.USER }}
+    - name: Year
+      debug: msg={{ ansible_date_time.year }}
+#    - name: command
+#      script: script.sh
+    - name: File from template
+      template: src={{ homedir }}templates/hostname dest={{ homedir }}files/resultFile.txt
