@@ -1,24 +1,7 @@
 ---
-  - hosts: remote_hosts
-    tasks: 
+  - hosts: local
+    tasks:
 
-###### Making package with maven ######
-
-    - name: mvn package command
-      command: mvn package
-      args:
-        chdir: /home/ec2-user/spring
-
-###### Making package with maven ######
-
-###### Moving and runing jar file ######
-
-    - name: Moving jar file
-      command: mv /home/ec2-user/spring/target/spring-petclinic-1.5.1.jar /home/ec2-user
-
-    - name: java -jar command
-      command: java -jar spring-petclinic-1.5.1.jar 
-      args:
-        chdir: /home/ec2-user
-
-###### Moving and runing jar file ######
+    - name: restart httpd
+      service: name=httpd state=restarted
+      sudo: yes
